@@ -6,27 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @keyframes blink {
-            0%{
-                opacity: 1;
-            }
-            100%{
-                opacity: 0;
-            }
-        }
-        body {
+        
+        /* body {
         background-image: url(https://www.thedailypost.kr/news/photo/201903/67057_60065_5525.png) ;
         background-position-x: center;
-        transition: background-image 1s ease-in-out;
-    }
-    
+        transition: background-image 1s ease-in-out; 
+    }*/
+    BODY {
+/*          background-image:url(https://www.thedailypost.kr/news/photo/201903/67057_60065_5525.png)
+              ,url(https://kingdohyeon.github.io/dogether/img/stars.png); */
+          background-repeat:no-repeat; 
+          background-color:#cccc66;
+          background-position: top center;
+          animation: blink 0.8s infinite;  
+         }
+         @keyframes blink {
+            from{
+                opacity: 0;
+            }
+            to{
+                background-image: url(https://kingdohyeon.github.io/dogether/img/stars.png);
+            }
+
+        }
+
     </style>
 </head>
 <body>
-    
+    <!-- <img src="https://www.thedailypost.kr/news/photo/201903/67057_60065_5525.png"> -->
 
 
-    <script type="text/javascript">
+    <script type="text/javascript">3
         //alert(`coding${" everybody"}`);
 
         // const id = prompt('아이디를 입력해주세요.');
