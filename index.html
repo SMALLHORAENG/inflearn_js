@@ -90,6 +90,19 @@
         //     }
         // })();//익명함수(함수명 없이 1회성) 정의와 동시에 실행
 
+        function get_str(){
+            for(i = 0; i < leng; i++){
+            str[i] = prompt('입력값');
+            str.push(str[i]);
+        }
+        }
+
+        const str = [];
+        const leng = prompt('횟수');
+        get_str();
+
+        console.log(str);
+
     </script>
 
 </body>
@@ -126,4 +139,7 @@
 
     for문안에 for문 사용이 가능한데, 외부 for문이 실행되면 내부 for문이 완료되야 다시 외부가 실행됨
 
+    대상.toUpperCase() 해주면 모두 대문자로 바꿔줌 (내장함수)
+    
+    
 -->
