@@ -90,18 +90,21 @@
         //     }
         // })();//익명함수(함수명 없이 1회성) 정의와 동시에 실행
 
-        function get_str(){
-            for(i = 0; i < leng; i++){
-            str[i] = prompt('입력값');
-            str.push(str[i]);
-        }
-        }
-
-        const str = [];
-        const leng = prompt('횟수');
-        get_str();
-
-        console.log(str);
+        // 수정하자 왜 오류가 생길까?
+        // function get_str(){
+        //     let str = []
+        //     let text = prompt('입력값');
+        //     console.log(text);
+        //     str.push(text);
+        //     console.log(str[0]);
+        //     return str[j];
+        // }
+        // let li = [];
+        // let j = prompt('반복횟수');
+        // for(i=0; i<j; i++){
+        //     get_str();
+        //     document.write(str);
+        // }
 
     </script>
 
@@ -141,5 +144,26 @@
 
     대상.toUpperCase() 해주면 모두 대문자로 바꿔줌 (내장함수)
     
-    
+    1. 배열 데이터 추가
+    배열.push() 내장함수 (괄호 속 내용은 추가 할 내용)
+    배열.concat('','') 배열을 연결해서 하나의 배열로 만드는 방법
+    push는 맨 뒤에 추가됨
+    첫번째에 추가 방법은 배열.unshift()
+    배열.splice(넣을칸(기준),삭제할갯수,넣을값)
+    ex)  
+    기존배열 ['a', 'x', 'y', 'b', 'c', 'd']
+    li.splice(1,2,'z','e') - 1번째 배열(0부터 시작) 에서 2개를 삭제하고 z,e를 1번째 배열에 추가
+    변경배열 ['a', 'z', 'e', 'b', 'c', 'd'] (x,y가 삭제되고 z,e가 추가됨)
+
+    2. 배열 데이터 삭제
+    배열.shift() 첫번째 배열값 제거
+    배열.pop() 배열 마지막값 제거
+
+    3. 배열 데이터 정렬
+    배열.sort() 알파벳 등등 순서대로 정렬해줌
+    배열.reverse() 역순으로 정렬해줌
+    원하는 정렬기준은 sort에서 괄호안에 sortfunction을 이용해서 해주면 됨
+
+
+
 -->
