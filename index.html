@@ -90,20 +90,16 @@
         //     }
         // })();//익명함수(함수명 없이 1회성) 정의와 동시에 실행
 
-        // 수정하자 왜 오류가 생길까?
-        // function get_str(){
-        //     let str = []
-        //     let text = prompt('입력값');
-        //     console.log(text);
-        //     str.push(text);
-        //     console.log(str[0]);
-        //     return str[j];
+        // 원하는 횟수만큼 입력 받아서 배열에 넣는 방식(함수,for문 이용)
+        // function in_str(){
+        //     let arr = [];
+        //     arr.push[j] = prompt('입력');
+        //     document.write(arr.push[j]);
         // }
-        // let li = [];
-        // let j = prompt('반복횟수');
-        // for(i=0; i<j; i++){
-        //     get_str();
-        //     document.write(str);
+
+        // j = prompt('몇회 반복');
+        // for(i = 0; i < j; i++){
+        //     in_str();
         // }
 
     </script>
@@ -163,6 +159,34 @@
     배열.sort() 알파벳 등등 순서대로 정렬해줌
     배열.reverse() 역순으로 정렬해줌
     원하는 정렬기준은 sort에서 괄호안에 sortfunction을 이용해서 해주면 됨
+
+    객체
+    객체 {key: value} 를 이용해서 더 간결하게 데이터를 정리하고 저장할 수 있음
+
+    var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+    
+    for(key in grades) {
+    document.write("key : "+key+" value : "+grades[key]+"<br />");
+    }
+    반복문이 실행되면 key in grades부분에서 key안에 grades객체안의 객체 키값이 담긴다
+    grades[key] 하면 egoing의 키 값을 가진 10이 출력됨
+    for문에 console.log()에서 괄호안에 grades[key] 하면 값인 10,6,80이 출력되고
+    key만 괄호안에 넣으면 egoing kk8805 sorialgi가 출력된다.
+
+    this 변수(js에 약속된 변수)
+    이 함수가 속해있는 객체를 가르키는 객체(함수소속 객체)
+    ex
+    var grades = {
+    'list': {'egoing': 10, 'k8805': 6, 'sorialgi': 80},
+    'show' : function(){
+        for(var name in this.list){
+            document.write(name+':'+this.list[name]+"<br />");
+        }
+        //name은 키값, this.list[name]키값에 해당하는 value값
+    }
+    };
+    여기서 함수안에 this.list 부분은 객체안 list의 값을 의미
+    * grades.show()를 해줘야 show가 실행되서 출력되서 결과값이 보임 *
 
 
 
