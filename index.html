@@ -122,6 +122,12 @@
 
         <script>
 
+            var vscope = 'global';
+            function fscope(){
+                var vscope = 'local';
+            }
+            fscope();
+            alert(vscope);
 
         </script>
 </body>
