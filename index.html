@@ -122,12 +122,7 @@
 
         <script>
 
-            var vscope = 'global';
-            function fscope(){
-                var vscope = 'local';
-            }
-            fscope();
-            alert(vscope);
+            
 
         </script>
 </body>
@@ -276,8 +271,21 @@
     여기서 $2가 뒤에있는 두번째 패턴을 의미함 그래서 앞뒤가 치환된 것
     이러한 치환방법을 캡처라고 한다
 
+        var vscope = 'global';
+            function fscope(){
+                var vscope = 'local';
+            }
+        fscope();
+        alert(vscope);
+            
+        전역변수 vscope의 값 global을 바꾸고 싶으면 함수안에 var이 없이 vscope=local로 하면 된다
     
+        익명함수를 통해서 함수를 선언과 동시에 호출이 가능함
 
+        for문 안에서 선언된 변수는 지역변수가 아니라 전역변수처럼 사용 가능
 
+        함수안에서 다른 함수의 변수를 호출하면 먼저는 전역변수부터 확인한다!
+
+        
 
 -->
